@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Definimos un css para cada controlador -->
+    <main class='<%= controller.controller_name %>'>
+      <%= yield %>
+    </main>
   </body>
 </html>
