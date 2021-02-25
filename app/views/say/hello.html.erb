@@ -1,0 +1,11 @@
+<h1>Holiii</h1>
+<p>
+    la hora es <%= @time %>
+</p>
+
+<!-- El metodo "link_to" nos pemitira llamar a una secuencia .erb, en ruby no se necesita utilizar parentesis.
+"say_goo.." es un valor ya pregenerador que Rails realiza para la aplicacion de las vistas-->
+<p>
+    El link para el adios
+    <%= link_to "Link:" , say_goodbye_path %>
+</p>
