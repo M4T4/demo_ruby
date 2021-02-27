@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :carts
+  resources :line_items
   root 'store#index', as: 'store_index'
   resources :products
   get 'say/hello'
