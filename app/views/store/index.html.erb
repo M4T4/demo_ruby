@@ -8,7 +8,7 @@
     <% cache product do %> <!-- De forma especifica-->
       <li>
       <!--Talves para alterar la imagen la deba de modificar aqui -->
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, width: 200) %>
         <h2><%= product.title %></h2>
         <p>
           <%= sanitize(product.description) %>
