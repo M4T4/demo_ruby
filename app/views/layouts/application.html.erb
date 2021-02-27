@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Demo</title>
+    <title>Variantes de pollo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <!-- Definimos un css para cada controlador -->
-    <main class='<%= controller.controller_name %>'>
-      <%= yield %>
-    </main>
+    <header class="main">
+      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf'%>
+      <h1><%= @page_title %></h1>
+    </header>
+    <section class="content">
+      <nav class="side_nav">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/questions">Preguntas</a></li>
+          <li><a href="/news">Novedades</a></li>
+          <li><a href="/contact">Contactos</a></li>
+        </ul>
+      </nav>
+      <main class='<%= controller.controller_name %>'>
+        <%= yield %>
+      </main>
+    </section>
   </body>
 </html>
